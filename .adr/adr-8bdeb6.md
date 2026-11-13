@@ -13,7 +13,7 @@ In the context of new sessions starting without the project's decisions, facing 
 Decisions linked to code reach an agent through code comments. Decisions about motivation and direction have no such link and reach a session only if something loads them.
 
 ## Decision
-`.adr/INDEX.md` holds the rules, the domain mapping and one line per proposed or accepted decision. Each line states what was decided and why, joined by "because". The line equals the record's `summary`, so `/adr fix` can rebuild the lines from the headers. Loaded through `@.adr/INDEX.md` in CLAUDE.md, and through a first-line pointer for agents without imports.
+`.adr/INDEX.md` holds the rules, the domain mapping and one line per proposed or accepted decision. Each line states what was decided and why, joined by "because". The line equals the record's `summary`, so `/adr fix` can rebuild the lines from the headers. Each agent loads it from whichever file it reads at session start: by import where the agent supports imports, otherwise through a first-line pointer. In this repository, `CLAUDE.md` imports `AGENTS.md`, which has the pointer and imports the index.
 
 ## Rejected
 - An index with instructions only: decisions not tied to code would never reach a session.
