@@ -20,7 +20,7 @@ Cover, in prose with sections only where they help:
 
 - The goal, and the motivation behind it, so the agent can make judgment calls the way the user would.
 - Current state: what is done, what is verified versus assumed, and what is in progress.
-- Decisions already made and the reason for each, including approaches tried and rejected.
+- Decisions already made and the reason for each, including approaches tried and rejected. Leave out any already recorded in the project's `.adr/` decision records.
 - The specific files, functions, commands, and errors involved, with exact paths and verbatim text where precision matters.
 - What to do next, and what done looks like.
 - Constraints and preferences the user stated in this conversation that are not in those instruction files.
